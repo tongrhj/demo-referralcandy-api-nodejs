@@ -1,0 +1,14 @@
+node_modules
+*.log
+.DS_Store
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+public/bundle.*
+.env
+.env.build
+
+.vercel

@@ -1,0 +1,53 @@
+:root {
+  --color: #0A72EF;
+  --accents-1: #fafafa;
+  --accents-2: #eaeaea;
+  --accents-3: #999;
+  --accents-4: #888;
+  --accents-5: #666;
+  --accents-6: #444;
+  --accents-7: #333;
+  --accents-8: #111;
+  --primary: var(--accents-8);
+  --secondary: var(--accents-5);
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	--minFontSize: 16px;
+  --maxFontSize: 24px;
+	--scaler: 4vw;
+	/* https://css-tricks.com/simplified-fluid-typography/ */
+	font-size: min(max(var(--minFontSize), var(--scaler)), var(--maxFontSize));
+}
+
+body {
+	color: var(--brand-colour);
+	margin: 0;
+	padding: 8px;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: var(--color);
+  transition-duration: .2s;
+  transition-property: color;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+p {
+  color: var(--secondary);
+  line-height: 1.6;
+  letter-spacing: -.02rem;
+  margin: 0;
+  font-weight: 400;
+}
