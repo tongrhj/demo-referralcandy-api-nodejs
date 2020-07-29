@@ -15,7 +15,7 @@
     </p>
     <div class="catalog">
       <div class="product">
-        <img src="./headphones-monochrome.svg" alt="headphones" />
+        <img src="./headphones-monochrome.svg" alt="headphones" loading="lazy" />
       </div>
       <div class="details">
         <h1>Product</h1>
@@ -25,6 +25,10 @@
         <ReferralShareWidget email={email} firstName={firstName} lastName={lastName} />
       </div>
     </div>
+
+    <p>
+      The code for this example can be found on <a href="https://github.com/tongrhj/demo-referralcandy-api-nodejs/">Github</a>.
+    </p>
   </main>
 </Modal>
 

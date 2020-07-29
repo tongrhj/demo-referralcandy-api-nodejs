@@ -38,7 +38,6 @@
   <div class="referrals">
     <h2>Give $10, Get $10</h2>
     <p>Share your referral link with your friends! Get rewarded for every order.</p>
-
     {#if referralLink}
       <div class="referral_link">{referralLink}</div>
       <div class="share">
@@ -47,7 +46,7 @@
         <button class="btn btn--share clipboard" on:click={handleCopy}>Copy to Clipboard</button>
       </div>
     {:else}
-      <ContentLoader width={800} />
+      <ContentLoader width={"100%"} height={80} />
     {/if}
   </div>
 </main>
@@ -66,6 +65,7 @@
     text-overflow: ellipsis;
     color: var(--primary);
     margin-bottom: 1.5rem;
+    word-break: break-all;
   }
 
   .btn {
@@ -111,7 +111,7 @@
     justify-content: space-between;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .share {
       flex-direction: column;
     }
