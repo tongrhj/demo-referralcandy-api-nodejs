@@ -1416,15 +1416,20 @@ supports-color@^7.0.0, supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
+svelte-content-loader@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.npmjs.org/svelte-content-loader/-/svelte-content-loader-1.1.3.tgz#58c049e4a2e60a93e1225d7d8727434a19237dcc"
+  integrity sha512-hXkwyAXiZ+2uNvWUHPj9U7M+8PGqgZVFNxyOHjLUF1ng4W9P9+9wlyT/bNx5BjuqoJsfjv1IZP1/5T1LfRKtYA==
+
+svelte-simple-modal@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.npmjs.org/svelte-simple-modal/-/svelte-simple-modal-0.5.0.tgz#5740b9ef74714711b9550a30bb9bd638da06a58e"
+  integrity sha512-MPKfsxi7ZrhWEDHkdQczbWysCP2FtEPcQRgOHNFQAQrdzgsduMoM1zbBb0muNUkUG7m/JEl3XHlMdhoxmsBmMA==
+
 svelte@^3.24.0:
   version "3.24.0"
   resolved "https://registry.npmjs.org/svelte/-/svelte-3.24.0.tgz#6565a42c9705796fa66c6abb4fedc09f4323a4a8"
   integrity sha512-VFXom6EP2DK83kxy4ZlBbaZklSbZIrpNH3oNXlPYHJUuW4q1OuAr3ZoYbfIVTVYPDgrI7Yq0gQcOhDlAtO4qfw==
-
-sweetalert2@^9.17.1:
-  version "9.17.1"
-  resolved "https://registry.npmjs.org/sweetalert2/-/sweetalert2-9.17.1.tgz#3d3c8d2dd8b44aeec6a01bf611be265143586bd1"
-  integrity sha512-D/VE2lT/bKd64/RBglLUtQ+3nsftzjzIiP2iqN6zPzPwf+2djIY+4k8Bg430zxRUn4DkZzyIuU58q3n0J43lvw==
 
 term-size@^2.1.0:
   version "2.2.0"

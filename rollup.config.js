@@ -25,7 +25,10 @@ export default {
       },
     }),
 
-    nodeResolve(),
+    nodeResolve({
+      browser: true,
+      dedupe: ['svelte', 'svelte/transition', 'svelte/internal']
+    }),
     commonjs(),
 
     // Watch the `public` directory and refresh the

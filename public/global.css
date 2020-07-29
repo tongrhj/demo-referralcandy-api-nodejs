@@ -48,6 +48,5 @@ p {
   color: var(--secondary);
   line-height: 1.6;
   letter-spacing: -.02rem;
-  margin: 0;
   font-weight: 400;
 }
