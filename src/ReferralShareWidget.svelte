@@ -8,6 +8,8 @@
   export let lastName;
 
   let referralLink = null
+  let referralLinkEncoded = null
+  let twitterShareMessage = null
 
   const { open } = getContext('simple-modal');
 
@@ -30,6 +32,8 @@
     });
     const response = await res.json();
     referralLink = response.referral_link
+    referralLinkEncoded = encodeURIComponent(referralLink)
+    twitterShareMessage = encodeURIComponent(`I love this product! Use my referral link to get $10 off! ${referralLink}`)
   });
 
 </script>
@@ -38,11 +42,11 @@
   <div class="referrals">
     <h2>Give $10, Get $10</h2>
     <p>Share your referral link with your friends! Get rewarded for every order.</p>
-    {#if referralLink}
+    {#if referralLink && referralLinkEncoded && twitterShareMessage}
       <div class="referral_link">{referralLink}</div>
       <div class="share">
-        <a class="btn btn--share fb" href="https://www.facebook.com/sharer/sharer.php?u={referralLink}">Share via Facebook</a>
-        <a class="btn btn--share tw" href="https://twitter.com/intent/tweet?text=I love this product! Use my referral link to get $10 off! {referralLink}">Share via Twitter</a>
+        <a class="btn btn--share fb" href="https://www.facebook.com/sharer/sharer.php?u={referralLinkEncoded}">Share via Facebook</a>
+        <a class="btn btn--share tw" href="https://twitter.com/intent/tweet?text={twitterShareMessage}">Share via Twitter</a>
         <button class="btn btn--share clipboard" on:click={handleCopy}>Copy to Clipboard</button>
       </div>
     {:else}
