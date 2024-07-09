@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
   } catch(e) {
     return res.status(400).json({ error: `Malformed params` })
   }
-  if (!body || !body.email || !body.first_name || !body.last_name) {
+  if (!body?.email || !body?.first_name || !body?.last_name) {
     return res.status(500).json({ error: `Missing params` })
   }
 
@@ -31,6 +31,8 @@ module.exports = async (req, res) => {
       referral_link: response.referral_link
     })
   } catch(err) {
-    return res.status(500).json({ error: util.inspect(err) })
+    return res.status(500).json({
+      error: JSON.stringify(err, Object.getOwnPropertyNames(err))
+  });
   }
 }
