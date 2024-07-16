@@ -14,7 +14,7 @@ import ReferralCandy from './lib/referralcandy-api'
 const referralcandy = new ReferralCandy({
   accessId: `samplef34by8gh...`,
   secretKey: `samplevb439ufa...`,
-  apiVersion: 'v1'
+  apiVersion: 'v2'
 })
 
 (async () => {
@@ -33,7 +33,7 @@ const referralcandy = new ReferralCandy({
 
 - `accessId`: Required; `string`
 - `secretKey`: Required; `string`
-- `apiVersion`: Required; `'v1'`
+- `apiVersion`: Required; `'v1' | 'v2'`
 
 ## More information
 

@@ -8,27 +8,25 @@ const referralcandy = new ReferralCandy({
 })
 
 module.exports = async (req, res) => {
-  let body = null
+  let params = null
   try {
-    body = req.body
+    params = req.query
   } catch(e) {
     return res.status(400).json({ error: `Malformed params` })
   }
-  if (!body?.email || !body?.first_name || !body?.last_name) {
+  if (!params?.email) {
     return res.status(500).json({ error: `Missing params` })
   }
 
-  const { email, first_name, last_name } = body
+  const { email } = params
 
   try {
-    const response = await referralcandy.portal.create({
-      first_name,
-      last_name,
+    const response = await referralcandy.rewards.read({
       email
     })
 
     return res.status(200).json({
-      referral_link: response.referral_link
+      rewards: response.rewards
     })
   } catch(err) {
     return res.status(500).json({

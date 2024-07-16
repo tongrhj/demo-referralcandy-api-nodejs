@@ -1,5 +1,6 @@
 <script>
   import ReferralShareWidget from "./ReferralShareWidget.svelte";
+  import CustomerProfileWidget from "./CustomerProfileWidget.svelte";
   export let email;
   export let firstName;
   export let lastName;
@@ -23,6 +24,7 @@
 
         <div class="primary btn" href="#">Buy Now</div>
         <ReferralShareWidget email={email} firstName={firstName} lastName={lastName} />
+        <CustomerProfileWidget email={email} />
       </div>
     </div>
 
